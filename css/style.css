@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10vh 5vw 0;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+#logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+#logo img {
+  width: 188px;
+}
+
+.header__logoAndLinks {
+  display: flex;
+  flex-direction: column;
+  justify-self: flex-start;
+}
+@media (min-width: 480px) {
+  .header__logoAndLinks {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.navigation__bar ul {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+}
+.navigation__bar .nav__links {
+  text-decoration: none;
+  color: #808080;
+  display: inline-block;
+  font-family: "Roboto", "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+  font-size: 1rem;
+  margin: 0 10px;
+}
+@media (min-width: 990px) {
+  .navigation__bar .nav__links {
+    margin: 0 20px;
+  }
+}
+.navigation__bar .active__link {
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.5);
+}
+
+.page__headers h1 {
+  font-family: "Palatino Linotype";
+  font-size: 8vh;
+  line-height: 8vh;
+  text-transform: capitalize;
+  margin-left: 2rem;
+}
+@media (min-width: 480px) {
+  .page__headers h1 {
+    font-size: 18vh;
+    line-height: 15vh;
+    margin-left: 0;
+  }
+}
+@media (min-width: 990px) {
+  .page__headers h1 {
+    font-size: 25vh;
+    line-height: 22vh;
+  }
+}
+.page__headers .header__bolder {
+  font-weight: 700;
+}
+.page__headers .header__container {
+  overflow: hidden;
+}
+
+.page__prag {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  color: #808080;
+  font-family: "Roboto", "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+  line-height: 32px;
+  font-weight: 300;
+}
+@media (min-width: 480px) {
+  .page__prag {
+    margin-left: 0;
+    max-width: 60%;
+  }
+}
+@media (min-width: 990px) {
+  .page__prag {
+    max-width: 35%;
+  }
+}
