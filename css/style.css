@@ -112,6 +112,7 @@ table {
   line-height: 8vh;
   text-transform: capitalize;
   margin-left: 2rem;
+  position: absolute;
 }
 @media (min-width: 480px) {
   .page__headers h1 {
@@ -131,6 +132,18 @@ table {
 }
 .page__headers .header__container {
   overflow: hidden;
+  height: 8vh;
+  position: relative;
+}
+@media (min-width: 480px) {
+  .page__headers .header__container {
+    height: 18vh;
+  }
+}
+@media (min-width: 990px) {
+  .page__headers .header__container {
+    height: 25vh;
+  }
 }
 
 .page__prag {

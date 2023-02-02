@@ -61,6 +61,7 @@
         line-height: 8vh;
         text-transform: capitalize;
         margin-left: 2rem;
+        position: absolute;
         @media (min-width: 480px) {
             font-size: 18vh;
             line-height: 15vh;
@@ -76,6 +77,14 @@
     }
     .header__container{
         overflow: hidden;
+        height: 8vh;
+        position: relative;
+        @media (min-width: 480px) {
+            height: 18vh;
+        }
+        @media (min-width: 990px) {
+            height: 25vh;
+        }
     }
 }
 

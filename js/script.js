@@ -1,5 +1,43 @@
 gsap.registerPlugin(ScrollTrigger)
 
+
+// the first animation for header
+gsap.timeline({
+    delay: 1
+})
+.fromTo(".header__hello__part > h1",
+    {
+        yPercent: "+=120"
+    },
+    {
+        yPercent: 0,
+        duration: .7,
+        ease: "power4.out"
+    }
+)
+.fromTo(".header__you__part > h1",
+    {
+        yPercent: "-=120"
+    },
+    {
+        yPercent: 0,
+        duration: .4,
+        ease: "power4.out"
+    }
+)
+.fromTo(".page__prag", 
+    {
+        x: -30,
+        opacity: 0
+    },
+    {
+        x: 0,
+        duration: .6,
+        ease: "power4.out",
+        opacity: 1
+    }
+)
+
 // scripts for changing the bg of header in scrolling
 gsap.to(".header", {
     background: "rgb(70, 70, 70)",
@@ -24,8 +62,8 @@ gsap.to(".data__container, .arrow__container", {
 })
 
 
+// animation for sections
 let projectsData = gsap.utils.toArray(".projects .project__data__container");
-
 projectsData.forEach((element) => {
     let dataMembers = element.querySelectorAll("h3, h2, p");
 
@@ -35,7 +73,7 @@ projectsData.forEach((element) => {
     gsap.timeline({
         scrollTrigger:{
             trigger: element,
-            start: "0% 60%",
+            start: "0% 80%",
             toggleActions: "play complete complete reverse"
         }
     })
