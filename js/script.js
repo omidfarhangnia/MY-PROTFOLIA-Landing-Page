@@ -22,3 +22,31 @@ gsap.to(".data__container, .arrow__container", {
         scrub: .5,
     }
 })
+
+
+let projectsData = gsap.utils.toArray(".projects .project__data__container");
+
+projectsData.forEach((element) => {
+    let dataMembers = element.querySelectorAll("h3, h2, p");
+
+    gsap.set(dataMembers, {opacity: 0, y: 30})
+    gsap.set(element, {scale: 0})
+
+    gsap.timeline({
+        scrollTrigger:{
+            trigger: element,
+            start: "0% 60%",
+            toggleActions: "play complete complete reverse"
+        }
+    })
+    .to(element, {
+        scale: 1,
+        duration: .8,
+        ease: "elastic.out(1, 1)",
+    })
+    .to(dataMembers, {
+        opacity: 1,
+        y: 0,
+        stagger: .2
+    })
+})
