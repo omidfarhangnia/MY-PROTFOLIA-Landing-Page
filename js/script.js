@@ -104,7 +104,6 @@ gsap.fromTo(".footer__links",
             trigger: "#footer",
             start: "0% 80%",
             toggleActions: "play complete complete reverse",
-            markers: true
         }
     }
 )
