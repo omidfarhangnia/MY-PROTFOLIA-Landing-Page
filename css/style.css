@@ -49,6 +49,11 @@ table {
   border-spacing: 0;
 }
 
+::selection {
+  color: #000000;
+  background: #ffffff;
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -95,7 +100,7 @@ table {
   display: inline-block;
   font-family: "Roboto", "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
   font-size: 1rem;
-  margin: 0 10px;
+  padding-bottom: 5px;
 }
 @media (min-width: 990px) {
   .navigation__bar .nav__links {
@@ -275,4 +280,55 @@ section[class*=project] .main__container {
   .project__data__container .project__description {
     font-size: 1.15rem;
   }
+}
+
+#footer {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 10vh 10vw;
+}
+#footer .footer__logo {
+  width: 100%;
+  margin-bottom: 20px;
+}
+#footer .footer__logo img {
+  width: 50%;
+  max-width: 230px;
+  object-fit: contain;
+}
+#footer .footer__links__container {
+  padding: 30px 0;
+}
+#footer .footer__links__container li {
+  margin: 0 20px 20px 0;
+}
+#footer .footer__links__container .footer__links {
+  text-decoration: none;
+  color: #808080;
+  padding-bottom: 5px;
+  display: inline-block;
+  border-bottom: 1px solid #808080;
+  font-size: 16px;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+  transition: 0.5s;
+}
+#footer .footer__links__container .footer__links:hover {
+  color: #000000;
+  translate: 0 -5px;
+}
+@media (min-width: 768px) {
+  #footer .footer__links__container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+#footer .footer__text__container p {
+  font-size: 14px;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+  color: #b8b8b8;
+  font-weight: 400;
+  line-height: 24px;
 }

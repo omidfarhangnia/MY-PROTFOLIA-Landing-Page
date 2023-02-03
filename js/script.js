@@ -88,3 +88,23 @@ projectsData.forEach((element) => {
         stagger: .2
     })
 })
+
+// animation for footer
+gsap.fromTo(".footer__links",
+    {
+        y: -30,
+        opacity: 0
+    },
+    {
+        y: 0,
+        opacity: 1,
+        stagger: .2,
+        ease: "power4.in",
+        scrollTrigger: {
+            trigger: "#footer",
+            start: "0% 80%",
+            toggleActions: "play complete complete reverse",
+            markers: true
+        }
+    }
+)

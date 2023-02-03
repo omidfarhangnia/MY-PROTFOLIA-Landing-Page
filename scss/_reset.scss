@@ -47,3 +47,8 @@ table {
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 $font-roboto: "Roboto";
+
+::selection{
+	color: #000000;
+	background: #ffffff;
+}
